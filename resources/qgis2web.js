@@ -100,7 +100,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-        extent: [-94.978403, -20.974972, -47.597703, 2.529290], maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
+        extent: [-96.367282, -19.634766, -52.348928, 2.095140], maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
             code: 'EPSG:4326',
             extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
             units: 'degrees'})
@@ -110,7 +110,7 @@ var map = new ol.Map({
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
-map.getView().fit([-94.978403, -20.974972, -47.597703, 2.529290], map.getSize());
+map.getView().fit([-96.367282, -19.634766, -52.348928, 2.095140], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -245,7 +245,7 @@ var onPointerMove = function(evt) {
         popupText += '</ul>';
     }
 
- if (doHighlight) {
+if (doHighlight) {
         if (currentFeature !== highlight) {
             if (highlight) {
                 featureOverlay.getSource().removeFeature(highlight);
